@@ -29,7 +29,7 @@ export const Title = ({ visible, children }) => {
         <animated.div
           key={key}
           style={{ ...props, ...styles.textSecondary, fontSize: "4.75rem" }}
-          className="font-bold text-7xl w-full text-center"
+          className="font-bold text-7xl w-full text-center leading-tight"
         >
           {children}
         </animated.div>

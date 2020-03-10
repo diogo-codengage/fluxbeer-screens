@@ -42,30 +42,29 @@ export const UnauthenticatedScreen = ({ visible, picpay }) => {
   } = useMainContext();
 
   return (
-    <>
+    <div className="flex flex-col justify-between">
       <Title visible={visible}>{product.name}</Title>
 
-      <div className="flex flex-1 items-end">
-        <div className="flex flex-1 w-full items-start">
+      <div className="mt-12">
+        <div className="flex flex-1 items-start">
           <div className="flex flex-1 justify-end items-end">
             <Beer visible={visible} />
           </div>
 
-          <div className="flex flex-1 flex-col ">
+          <div className="flex flex-1 flex-col justify-between self-stretch">
             <BeerInfos visible={visible}>
               {product.descriptions.map(renderDescription)}
             </BeerInfos>
-
-            {picpay && <Payment visible={visible} paymentData={picpay} />}
+            <Payment visible={visible} />
           </div>
         </div>
-      </div>
 
-      <div
-        className="px-4 py-2 text-white text-xs"
-        style={{ backgroundColor: colors.secondary }}
-        dangerouslySetInnerHTML={{ __html: footer }}
-      />
-    </>
+        <div
+          className="px-4 py-2 text-white text-xs"
+          style={{ backgroundColor: colors.secondary }}
+          dangerouslySetInnerHTML={{ __html: footer }}
+        />
+      </div>
+    </div>
   );
 };

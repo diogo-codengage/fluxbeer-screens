@@ -15,13 +15,13 @@ import "./styles/index.css";
 import { MainContext } from "./components/Context";
 
 // @TODO Get url and secret from environment variable
-const GRAPHQL_LINK = "//13.59.30.225/v1/graphql";
+const GRAPHQL_LINK = "//d9ghhvwla3yx5.cloudfront.net/v1/graphql";
 const GRAPHQL_HEADERS = {
   "x-hasura-admin-secret": "iDYVRLJsxtpoBUuPS4+zv0zrID7MKSmFOiQ7UD9M"
 };
 
 const httpLink = new HttpLink({
-  uri: `http:${GRAPHQL_LINK}`,
+  uri: `https:${GRAPHQL_LINK}`,
   headers: GRAPHQL_HEADERS
 });
 

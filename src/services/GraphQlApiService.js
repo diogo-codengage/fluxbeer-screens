@@ -1,79 +1,107 @@
-import {gql} from '@apollo/client';
+import { gql } from "@apollo/client";
 
-export const PRODUCT_QUERY = gql`
-  {
-    product_by_pk(id: 1) {
-      abv
-      active
-      alcohol
-      bitterness
-      body
-      ean
-      ibu
+export const TAP_INFO_QUERY = gql`
+  query tapInfo($tapId: bigint!) {
+    tap_by_pk(id: $tapId) {
+      alias
+      companyId
       id
-      ingredients
-      measured_unit_id
-      name
-      note
-      obs
-      price
-      product_category_id
-      product_photo
-      product_type_id
+      serial
+      tap_containers(limit: 1, order_by: { createdAt: desc }) {
+        stock_container {
+          measureUnit
+          capacity
+          createdAt
+          product {
+            code
+            companyId
+            id
+            info
+            name
+            photo
+          }
+        }
+      }
     }
   }
-
-
 `;
 
 export const AVAILABLE_CONSUMPTION_SUBSCRIPTION = gql`
-  subscription availableConsumption {
-    tap_consumption(
-      limit: 1,
-      order_by: {id: desc},
-      where: {status_id: {_eq: 4}, tap_id: {_eq: 1}}) {
+  subscription availableConsumption($tapId: bigint) {
+    consumption_order(
+      where: { _not: { consumption_begins: {} }, tapId: { _eq: $tapId } }
+      order_by: { id: asc }
+      limit: 1
+    ) {
+      amount
+      code
+      comment
+      createdAt
       id
-      status_id
-      tap_id
-      total_amount
-      created_at
-      available_amount
+      saleId
+      tapId
+      consumption_begins {
+        id
+        createdAt
+      }
     }
   }
 `;
 
 // export const CONSUMPTION_BEGIN_MUTATION = gql``;
 
-export const CONSUMPTION_END_MUTATION = gql`
-  mutation updateConsumptionMutation($id: Int!, $total_amount: Float!) {
-    update_tap_consumption(
-      _set: {status_id: 2, total_amount: $total_amount},
-      where: {id: {_eq: $id}}) {
-      affected_rows
-      returning {
-        status_id
-        id
-        available_amount
-        total_amount
+export const CONSUMPTION_BEGIN_MUTATION = gql`
+  mutation consumptionBeginMutation(
+    $limitAmount: Int!
+    $consumptionOrderId: bigint
+  ) {
+    insert_consumption_begin(
+      objects: {
+        limitAmount: $limitAmount
+        consumptionOrderId: $consumptionOrderId
       }
-    }
-  }
-`;
-
-export const PERFORMANCE_METRIC_MUTATION = gql`
-  mutation storePerformanceMetric($metric: jsonb!, $tapId: Int!, $group: String, $referenceId: String) {
-    insert_performance_metric(objects: {
-      group: $group,
-      tapId: $tapId,
-      referenceId: $referenceId,
-      metric: $metric
-    }) {
+    ) {
       returning {
+        id
         createdAt
-        id
-        metric
+        consumptionOrderId
+        client_id
+        limitAmount
       }
     }
   }
 `;
 
+export const CONSUMPTION_END_MUTATION = gql`
+  mutation consumptionEndMutation(
+    $consumptionBeginId: bigint!
+    $totalAmount: Int!
+    $code: uuid
+    $metric: jsonb
+  ) {
+    insert_consumption_end(
+      objects: {
+        consumptionBeginId: $consumptionBeginId
+        totalAmount: $totalAmount
+        code: $code
+        metric: $metric
+      }
+    ) {
+      returning {
+        code
+        id
+        createdAt
+        consumptionBeginId
+        reference
+        totalAmount
+        consumption_begin {
+          client_id
+          consumptionOrderId
+          id
+          limitAmount
+          createdAt
+        }
+      }
+    }
+  }
+`;

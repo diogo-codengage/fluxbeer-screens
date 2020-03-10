@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useMemo } from "react";
 
 import logo from "../assets/images/logo.svg";
-import bgImage from "../assets/images/bg.png";
+import bgImage from "../assets/images/bg-2.png";
 import beer from "../assets/images/beer.png";
 
 const Context = createContext();

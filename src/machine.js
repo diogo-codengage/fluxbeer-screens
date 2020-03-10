@@ -1,7 +1,7 @@
-import { Machine } from 'xstate'
+import { Machine } from "xstate";
 
 export default Machine({
-  initial: 'indisponivel',
+  initial: "indisponivel",
   context: {
     fluxo: 0
   },
@@ -9,75 +9,75 @@ export default Machine({
     indisponivel: {
       on: {
         DISPONIVEL: {
-          target: 'disponibilizando'
+          target: "disponibilizando"
         }
       }
     },
     disponibilizando: {
       after: {
-        300: 'disponivel'
+        300: "disponivel"
       }
     },
     disponivel: {
-      id: 'disponivel',
-      initial: 'nao_autenticado',
+      id: "disponivel",
+      initial: "nao_autenticado",
       on: {
         INDISPONIVEL: {
-          target: 'indisponivel'
+          target: "indisponivel"
         }
       },
       states: {
         nao_autenticado: {
           on: {
             AUTENTICADO: {
-              target: 'autenticando'
+              target: "autenticando"
             }
           }
         },
         autenticando: {
           after: {
-            500: 'autenticado'
+            500: "autenticado"
           }
         },
         autenticado: {
           on: {
             LOGOUT: {
-              target: 'nao_autenticado'
+              target: "nao_autenticado"
             }
           },
-          initial: 'confirmado',
+          initial: "confirmado",
           states: {
             confirmado: {
               after: {
-                3300: 'servindo'
+                3300: "servindo"
               }
             },
             servindo: {
               on: {
                 FLUXO: [
                   {
-                    target: 'servindo'
-                  },
+                    target: "servindo"
+                  }
                 ],
                 FINALIZADO: [
                   {
-                    target: 'finalizado'
-                  },
+                    target: "finalizado"
+                  }
                 ],
                 SEM_FLUXO: {
-                  target: 'finalizado'
+                  target: "finalizado"
                 }
               }
             },
             finalizado: {
-              after:{
-                3000: 'sessao_finalizada'
+              after: {
+                3000: "sessao_finalizada"
               }
             },
             sessao_finalizada: {
               on: {
-                '': {
-                  target: '#disponivel.nao_autenticado'
+                "": {
+                  target: "#disponivel.nao_autenticado"
                 }
               }
             }
@@ -86,4 +86,4 @@ export default Machine({
       }
     }
   }
-})
+});
