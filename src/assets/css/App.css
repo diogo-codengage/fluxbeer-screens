@@ -1,0 +1,10 @@
+/* Main CSS file */
+
+@import '_example/_example.css';
+
+.app-container {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Rubik, sans-serif;
+}

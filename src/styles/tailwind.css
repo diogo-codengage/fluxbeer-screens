@@ -1,0 +1,11 @@
+@import url("../assets/images/bg.png");
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+html {
+  @apply text-default antialiased bg-center bg-cover bg-no-repeat font-rubik;
+}
