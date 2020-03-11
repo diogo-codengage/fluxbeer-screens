@@ -43,7 +43,7 @@ export const Payment = ({ visible }) => {
       item && (
         <animated.div key={key} style={props}>
           <div
-            className="py-4 px-7 font-bold text-white text-2xl rounded-tl-2xl rounded-bl-2xl"
+            className="py-4 px-7 font-medium text-white text-2xl rounded-tl-2xl rounded-bl-2xl"
             style={styles.bgSecondary}
           >
             {product.title}
@@ -52,7 +52,7 @@ export const Payment = ({ visible }) => {
           <div className="flex bg-white p-7 rounded-tl-2xl shadow-payment justify-between">
             <div className="flex flex-col flex-1 items-center mr-5">
               <div
-                className="font-bold text-lg text-center leading-none"
+                className="font-medium text-lg text-center leading-none"
                 style={styles.textPrimary}
               >
                 A cada ({product.single.value}ml)
@@ -79,7 +79,7 @@ export const Payment = ({ visible }) => {
 
               <div className="flex flex-col flex-1">
                 <div
-                  className="font-bold text-sm text-center leading-tight mb-3"
+                  className="font-medium text-sm text-center leading-tight mb-3"
                   style={styles.textPrimary}
                 >
                   Compre copos avulsos:
@@ -106,8 +106,8 @@ export const Payment = ({ visible }) => {
                 src="https://prixel.files.wordpress.com/2015/09/robalinhopescados-qr-code.png?w=256"
                 alt="QRCode"
                 style={{ maxWidth: "none" }}
-                width={164}
-                height={164}
+                width={167}
+                height={167}
               />
               <div className="text-xs" style={styles.textSecondary}>
                 Faça a leitura pelo seu celular.

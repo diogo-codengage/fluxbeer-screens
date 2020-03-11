@@ -43,7 +43,9 @@ export const UnauthenticatedScreen = ({ visible, picpay }) => {
 
   return (
     <div className="flex flex-col justify-between">
-      <Title visible={visible}>{product.name}</Title>
+      <Title main visible={visible}>
+        {product.name}
+      </Title>
 
       <div className="mt-12">
         <div className="flex flex-1 items-start">

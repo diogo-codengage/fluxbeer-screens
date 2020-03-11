@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useMemo } from "react";
 
 import { animated, useTransition } from "react-spring";
 
 import { useMainContext } from "./Context";
 
-export const Title = ({ visible, children }) => {
+export const Title = ({ visible, main, children }) => {
   const transitions = useTransition(visible, null, {
     from: {
       opacity: 0,
@@ -23,13 +23,23 @@ export const Title = ({ visible, children }) => {
   });
   const { styles } = useMainContext();
 
+  const classes = useMemo(() => {
+    return "text-center leading-tight ".concat(
+      main ? "font-bold w-full" : "font-medium w-4/5"
+    );
+  }, [main]);
+
   return transitions.map(
     ({ item, key, props }) =>
       item && (
         <animated.div
           key={key}
-          style={{ ...props, ...styles.textSecondary, fontSize: "4.75rem" }}
-          className="font-bold text-7xl w-full text-center leading-tight"
+          style={{
+            ...props,
+            ...styles.textSecondary,
+            fontSize: main ? "4.75rem" : "4rem"
+          }}
+          className={classes}
         >
           {children}
         </animated.div>

@@ -19,7 +19,7 @@ export const BeerInfo = memo(
 
         <div className="flex flex-1 flex-col justify-center">
           <div
-            className="font-bold text-lg uppercase"
+            className="font-medium text-lg uppercase"
             style={styles.textSecondary}
           >
             {title}
