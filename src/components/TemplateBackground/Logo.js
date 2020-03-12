@@ -2,7 +2,7 @@ import React from "react";
 
 import { useSpring, animated } from "react-spring";
 
-import { useMainContext } from "./Context";
+import { useMainContext } from "../Context";
 
 export const Logo = () => {
   const props = useSpring({

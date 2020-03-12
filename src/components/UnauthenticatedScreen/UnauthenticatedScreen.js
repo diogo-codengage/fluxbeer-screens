@@ -1,19 +1,19 @@
 import React from "react";
 
+import beerIcon from "../../assets/icons/beer.svg";
+import flavorIcon from "../../assets/icons/flavor.svg";
+import abvIcon from "../../assets/icons/abv.svg";
+import ibuIcon from "../../assets/icons/ibu.svg";
+import lupuloIcon from "../../assets/icons/lupulo.svg";
+import placeIcon from "../../assets/icons/place.svg";
+
+import { useMainContext } from "../Context";
+import { Title } from "../Title";
+
 import { Beer } from "./Beer";
-import { Title } from "./Title";
 import { BeerInfo } from "./BeerInfo";
 import { BeerInfos } from "./BeerInfos";
 import { Payment } from "./Payment";
-
-import { useMainContext } from "./Context";
-
-import beerIcon from "../assets/icons/beer.svg";
-import flavorIcon from "../assets/icons/flavor.svg";
-import abvIcon from "../assets/icons/abv.svg";
-import ibuIcon from "../assets/icons/ibu.svg";
-import lupuloIcon from "../assets/icons/lupulo.svg";
-import placeIcon from "../assets/icons/place.svg";
 
 const items = {
   BEER: {
@@ -57,7 +57,7 @@ export const UnauthenticatedScreen = ({ visible, picpay }) => {
             <BeerInfos visible={visible}>
               {product.descriptions.map(renderDescription)}
             </BeerInfos>
-            <Payment visible={visible} />
+            <Payment visible={visible} paymentData={picpay} />
           </div>
         </div>
 

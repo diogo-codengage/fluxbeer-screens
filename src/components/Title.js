@@ -24,8 +24,8 @@ export const Title = ({ visible, main, children }) => {
   const { styles } = useMainContext();
 
   const classes = useMemo(() => {
-    return "text-center leading-tight ".concat(
-      main ? "font-bold w-full" : "font-medium w-4/5"
+    return "text-center ".concat(
+      main ? "font-bold w-full leading-tight" : "font-medium leading-none"
     );
   }, [main]);
 

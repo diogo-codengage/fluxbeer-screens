@@ -45,3 +45,11 @@
 .separator::after {
   margin-left: 0.75rem;
 }
+
+.font-54 {
+  font-size: 3.37rem;
+}
+
+.font-94 {
+  font-size: 5.87rem;
+}

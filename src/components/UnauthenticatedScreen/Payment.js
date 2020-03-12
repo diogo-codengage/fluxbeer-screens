@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useMemo } from "react";
 
 import { animated, useTransition } from "react-spring";
 
-import { useMainContext } from "./Context";
+import { useMainContext } from "../Context";
 
-const format = value => {
+export const formatCurrency = (value, hasSymbol) => {
   const formatter = new Intl.NumberFormat("pt-BR", {
     style: "currency",
     currency: "BRL",
     currencyDisplay: "symbol"
   });
-  return formatter
-    .format(value)
-    .replace("R$", "")
-    .trim();
+
+  const formated = formatter.format(value);
+
+  return hasSymbol ? formated : formated.replace("R$", "").trim();
 };
 
-export const Payment = ({ visible }) => {
+export const Payment = ({ visible, paymentData }) => {
   const transitions = useTransition(visible, null, {
     from: {
       opacity: 0,
@@ -37,6 +37,18 @@ export const Payment = ({ visible }) => {
     config: { product },
     styles
   } = useMainContext();
+
+  const qrcode = useMemo(() => {
+    if (!!paymentData) {
+      const {
+        qrcode: { base64 }
+      } = paymentData;
+      console.log({ paymentData });
+      return base64;
+    }
+    // mock qrcode
+    return "https://prixel.files.wordpress.com/2015/09/robalinhopescados-qr-code.png?w=256";
+  }, [paymentData]);
 
   return transitions.map(
     ({ item, key, props }) =>
@@ -66,7 +78,7 @@ export const Payment = ({ visible }) => {
                   className="text-6xl font-bold leading-none"
                   style={styles.textSecondary}
                 >
-                  {format(product.single.price)}
+                  {formatCurrency(product.single.price)}
                 </div>
               </div>
 
@@ -93,7 +105,7 @@ export const Payment = ({ visible }) => {
                     >
                       <div className="text-xs">{item.title}</div>
                       <div className="text-3xl font-bold leading-tight">
-                        {format(item.price)}
+                        {formatCurrency(item.price)}
                       </div>
                     </div>
                   ))}
@@ -103,7 +115,7 @@ export const Payment = ({ visible }) => {
 
             <div className="flex flex-col flex-1 items-center justify-between">
               <img
-                src="https://prixel.files.wordpress.com/2015/09/robalinhopescados-qr-code.png?w=256"
+                src={qrcode}
                 alt="QRCode"
                 style={{ maxWidth: "none" }}
                 width={167}

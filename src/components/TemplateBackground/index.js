@@ -1,0 +1,1 @@
+export { TemplateBackground } from "./TemplateBackground";

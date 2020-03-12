@@ -2,7 +2,7 @@ import React from "react";
 
 import { animated, useTransition } from "react-spring";
 
-import { useMainContext } from "./Context";
+import { useMainContext } from "../Context";
 
 export const Beer = ({ visible }) => {
   const transitions = useTransition(visible, null, {

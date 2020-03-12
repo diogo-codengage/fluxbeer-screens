@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 
-import { useMainContext } from "./Context";
+import { useMainContext } from "../Context";
 
 export const BeerInfo = memo(
   ({ icon, iconWidth = "w-20", title, description }) => {

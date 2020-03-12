@@ -2,7 +2,7 @@ import React from "react";
 
 import { animated, useSpring } from "react-spring";
 
-import { useMainContext } from "./Context";
+import { useMainContext } from "../Context";
 
 export const Progress = ({ duration = 10000, stop }) => {
   const { styles } = useMainContext();
