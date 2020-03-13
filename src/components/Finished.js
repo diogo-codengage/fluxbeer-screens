@@ -8,10 +8,9 @@ export const Finished = () => {
   return (
     <TemplateProcess
       title={
-        <span>
-          Obrigado por consumir conosco.
-          <br /> Volte sempre!
-        </span>
+        <div className="w-4/5 mx-auto">
+          Obrigado por consumir conosco. Volte sempre!
+        </div>
       }
       stop
     >

@@ -7,7 +7,7 @@ import { Title } from "../Title";
 export const TemplateProcess = ({ title, duration, stop, children }) => {
   return (
     <>
-      <div className="flex-1 flex flex-col items-center mt-7">
+      <div className="flex-1 flex flex-col items-center w-full mt-7">
         <Title visible>{title}</Title>
         {children}
       </div>

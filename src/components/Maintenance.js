@@ -1,11 +1,11 @@
 import React from "react";
 
-import errorImage from "../assets/images/err.svg";
+import maintenanceImage from "../assets/images/err.svg";
 
 import { TemplateProcess } from "./TemplateProcess";
 import { useMainContext } from "./Context";
 
-export const Error = () => {
+export const Maintenance = () => {
   const { styles } = useMainContext(0);
   return (
     <TemplateProcess
@@ -20,7 +20,7 @@ export const Error = () => {
       stop
     >
       <div className="flex flex-col justify-center mt-40">
-        <img src={errorImage} alt="Torneira desligada" />
+        <img src={maintenanceImage} alt="Torneira desligada" />
         <div
           className="text-4xl text-center mt-32"
           style={styles.textSecondary}

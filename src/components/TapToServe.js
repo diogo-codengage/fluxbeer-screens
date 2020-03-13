@@ -17,6 +17,25 @@ const AnimatedNumber = ({ value, suffix, ...props }) => {
   );
 };
 
+const Consumer = ({ currentMl, textSecondary, textPrimary }) => {
+  const { styles } = useMainContext();
+  return (
+    <div className="flex flex-col items-center mb-16 leading-none">
+      <AnimatedNumber
+        value={currentMl}
+        style={styles.textSecondary}
+        className="font-medium font-94"
+      />
+      <div style={styles.textSecondary} className="flex items-center text-5xl">
+        {textSecondary}
+      </div>
+      <div style={styles.textPrimary} className="font-medium font-54">
+        {textPrimary}
+      </div>
+    </div>
+  );
+};
+
 export const TapToServe = ({
   name,
   currentMl = 0,
@@ -30,7 +49,10 @@ export const TapToServe = ({
   const title = useMemo(
     () =>
       !!name ? (
-        <span>Olá {name}, puxe a torneira para servir.</span>
+        <div>
+          Olá {name}, puxe a <br />
+          torneira para servir.
+        </div>
       ) : (
         <span>
           Puxe a torneira <br />
@@ -43,41 +65,22 @@ export const TapToServe = ({
   const footer = useMemo(
     () =>
       !!name ? (
-        <div className="flex flex-col items-center mb-16 leading-none">
-          <AnimatedNumber
-            value={currentMl}
-            style={styles.textSecondary}
-            className="font-medium font-94"
-          />
-          <div
-            style={styles.textSecondary}
-            className="flex items-center text-5xl"
-          >
-            <div>Saldo: </div>
-            <div className="font-bold">{formatCurrency(balance, true)}</div>
-          </div>
-          <div style={styles.textPrimary} className="font-medium font-54">
-            {formatCurrency(value, true)}
-          </div>
-        </div>
+        <Consumer
+          currentMl={currentMl}
+          textPrimary={formatCurrency(value, true)}
+          textSecondary={
+            <>
+              <div>Saldo: </div>
+              <div className="font-bold">{formatCurrency(balance, true)}</div>
+            </>
+          }
+        />
       ) : (
-        <div className="flex flex-col items-center mb-16 leading-none">
-          <AnimatedNumber
-            suffix="ml"
-            value={currentMl}
-            style={styles.textSecondary}
-            className="font-medium font-94"
-          />
-          <div
-            style={styles.textSecondary}
-            className="flex items-center text-5xl"
-          >
-            de {currentMl}ml
-          </div>
-          <div style={styles.textPrimary} className="font-medium font-54">
-            {percentage}%
-          </div>
-        </div>
+        <Consumer
+          currentMl={currentMl}
+          textPrimary={`${percentage}%`}
+          textSecondary={`de ${currentMl}ml`}
+        />
       ),
     [name, balance, currentMl, percentage, value, styles]
   );

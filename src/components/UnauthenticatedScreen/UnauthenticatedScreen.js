@@ -14,6 +14,7 @@ import { Beer } from "./Beer";
 import { BeerInfo } from "./BeerInfo";
 import { BeerInfos } from "./BeerInfos";
 import { Payment } from "./Payment";
+import { Footer } from "./Footer";
 
 const items = {
   BEER: {
@@ -38,7 +39,7 @@ const renderDescription = (description, index) => (
 
 export const UnauthenticatedScreen = ({ visible, picpay }) => {
   const {
-    config: { product, footer, colors }
+    config: { product, footer }
   } = useMainContext();
 
   return (
@@ -61,11 +62,7 @@ export const UnauthenticatedScreen = ({ visible, picpay }) => {
           </div>
         </div>
 
-        <div
-          className="px-4 py-2 text-white text-xs"
-          style={{ backgroundColor: colors.secondary }}
-          dangerouslySetInnerHTML={{ __html: footer }}
-        />
+        <Footer footer={footer} visible={visible} />
       </div>
     </div>
   );

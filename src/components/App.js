@@ -18,9 +18,10 @@ import { UnauthenticatedScreen } from "./UnauthenticatedScreen";
 import { AwaitingSinglePurchase } from "./AwaitingSinglePurchase";
 import { ReadingCard } from "./ReadingCard";
 import { PaymentConfirmed } from "./PaymentConfirmed";
+import { PaymentRefused } from "./PaymentRefused";
 import { TapToServe } from "./TapToServe";
 import { Finished } from "./Finished";
-import { Error } from "./Error";
+import { Maintenance } from "./Maintenance";
 
 import { TemplateBackground } from "./TemplateBackground";
 
@@ -164,19 +165,21 @@ function App() {
       {screen === 0 && (
         <UnauthenticatedScreen visible picpay={picpay} product={product} />
       )}
-      {screen === 1 && <AwaitingSinglePurchase duration={30000} />}
+      {screen === 1 && <AwaitingSinglePurchase visible duration={30000} />}
       {screen === 2 && <PaymentConfirmed />}
-      {screen === 3 && (
+      {screen === 3 && <PaymentRefused />}
+      {screen === 4 && (
         <TapToServe
+          name="Diogo"
           currentMl={350}
           balance={34.35}
           value={4.5}
           duration={10000}
         />
       )}
-      {screen === 4 && <Finished />}
-      {screen === 5 && <Error />}
-      {screen === 6 && <ReadingCard />}
+      {screen === 5 && <Finished />}
+      {screen === 6 && <Maintenance />}
+      {screen === 7 && <ReadingCard />}
 
       {/* {current.matches('disponivel.autenticado.confirmado') && <Success/>} */}
       {/* {current.matches('disponivel.autenticado.servindo') && <BeerPour volume={volume}/>} */}

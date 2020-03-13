@@ -3,18 +3,20 @@ import React from "react";
 import { TemplateProcess } from "./TemplateProcess";
 import { LoadingSuccessFail } from "./Animations";
 
-export const PaymentConfirmed = () => {
+export const PaymentRefused = () => {
   return (
     <TemplateProcess
       title={
         <div className="flex flex-col items-center">
-          Pronto!
-          <div className="w-2/3">Seu pagamento foi confirmado.</div>
+          Negativo!
+          <div className="w-2/3">
+            Seu pagamento foi recusado pela operadora.
+          </div>
         </div>
       }
       stop
     >
-      <LoadingSuccessFail range={[239, 388]} />
+      <LoadingSuccessFail range={[656, 824]} />
     </TemplateProcess>
   );
 };

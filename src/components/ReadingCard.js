@@ -7,10 +7,7 @@ export const ReadingCard = () => {
     <TemplateProcess
       title={
         <span>
-          Aguarde...
-          <div className="font-regular text-4xl mt-5">
-            Fazendo a leitura do cartão.
-          </div>
+          Fazendo a leitura <br /> do identificador…
         </span>
       }
       duration={10000}
