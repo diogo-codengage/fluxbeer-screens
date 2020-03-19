@@ -8,7 +8,7 @@ export const Finished = () => {
   return (
     <TemplateProcess
       title={
-        <div className="w-4/5 mx-auto">
+        <div className="w-3/5 mx-auto">
           Obrigado por consumir conosco. Volte sempre!
         </div>
       }

@@ -1,31 +1,18 @@
 import React, { useMemo } from "react";
 
-import { useSpring, animated } from "react-spring";
-
 import { TemplateProcess } from "./TemplateProcess";
 import { useMainContext } from "./Context";
 
 import { formatCurrency } from "./UnauthenticatedScreen/Payment";
 
-const AnimatedNumber = ({ value, suffix, ...props }) => {
-  const springProps = useSpring({ number: 0, from: { number: value } });
-  return (
-    <div {...props}>
-      <animated.span>{springProps.number}</animated.span>
-      {suffix}
-    </div>
-  );
-};
 
-const Consumer = ({ currentMl, textSecondary, textPrimary }) => {
+const Consumer = ({ currentConsumption, textSecondary, textPrimary }) => {
   const { styles } = useMainContext();
   return (
     <div className="flex flex-col items-center mb-16 leading-none">
-      <AnimatedNumber
-        value={currentMl}
-        style={styles.textSecondary}
-        className="font-medium font-94"
-      />
+      <div className="font-medium font-94" style={styles.textSecondary}>
+        <span>{currentConsumption}ml</span>
+      </div>
       <div style={styles.textSecondary} className="flex items-center text-5xl">
         {textSecondary}
       </div>
@@ -38,10 +25,10 @@ const Consumer = ({ currentMl, textSecondary, textPrimary }) => {
 
 export const TapToServe = ({
   name,
-  currentMl = 0,
-  balance = 0,
-  value = 0,
-  percentage = 0,
+  currentConsumption = 0,
+  totalConsumption = 0,
+  totalValue = 0,
+  currentValue = 0,
   ...props
 }) => {
   const { styles } = useMainContext();
@@ -62,27 +49,32 @@ export const TapToServe = ({
     [name]
   );
 
+  const percentageConsumption = useMemo(
+    () => (currentConsumption * 100) / totalConsumption,
+    [currentConsumption, totalConsumption]
+  );
+
   const footer = useMemo(
     () =>
       !!name ? (
         <Consumer
-          currentMl={currentMl}
-          textPrimary={formatCurrency(value, true)}
+          currentConsumption={currentConsumption}
+          textPrimary={formatCurrency(currentValue, true)}
           textSecondary={
             <>
               <div>Saldo: </div>
-              <div className="font-bold">{formatCurrency(balance, true)}</div>
+              <div className="font-bold">{formatCurrency(totalValue, true)}</div>
             </>
           }
         />
       ) : (
         <Consumer
-          currentMl={currentMl}
-          textPrimary={`${percentage}%`}
-          textSecondary={`de ${currentMl}ml`}
+          currentConsumption={currentConsumption}
+          textSecondary={`de ${totalConsumption}ml`}
+          textPrimary={`${percentageConsumption}%`}
         />
       ),
-    [name, balance, currentMl, percentage, value, styles]
+    [name, totalValue, currentValue, currentConsumption, percentageConsumption, styles]
   );
 
   return (

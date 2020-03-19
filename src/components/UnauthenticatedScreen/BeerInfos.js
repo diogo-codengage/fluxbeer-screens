@@ -33,7 +33,7 @@ export const BeerInfos = ({ visible, children }) => {
   });
 
   return (
-    <div className="pl-10">
+    <div className="pl-10 w-4/5">
       {transitions.map(({ item, props, key }) => (
         <animated.div key={key} style={props}>
           {item}

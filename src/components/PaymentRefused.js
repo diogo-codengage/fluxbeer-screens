@@ -9,7 +9,7 @@ export const PaymentRefused = () => {
       title={
         <div className="flex flex-col items-center">
           Negativo!
-          <div className="w-2/3">
+          <div className="w-7/12">
             Seu pagamento foi recusado pela operadora.
           </div>
         </div>

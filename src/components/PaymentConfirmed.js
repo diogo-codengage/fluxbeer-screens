@@ -9,7 +9,7 @@ export const PaymentConfirmed = () => {
       title={
         <div className="flex flex-col items-center">
           Pronto!
-          <div className="w-2/3">Seu pagamento foi confirmado.</div>
+          <div className="w-3/5">Seu pagamento foi confirmado.</div>
         </div>
       }
       stop

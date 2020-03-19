@@ -1,6 +1,6 @@
 import React from "react";
 
-import maintenanceImage from "../assets/images/err.svg";
+import { Maintenance as MaintenanceAnimation } from "./Animations";
 
 import { TemplateProcess } from "./TemplateProcess";
 import { useMainContext } from "./Context";
@@ -20,7 +20,7 @@ export const Maintenance = () => {
       stop
     >
       <div className="flex flex-col justify-center mt-40">
-        <img src={maintenanceImage} alt="Torneira desligada" />
+        <MaintenanceAnimation />
         <div
           className="text-4xl text-center mt-32"
           style={styles.textSecondary}

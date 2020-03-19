@@ -10,7 +10,7 @@ export const AwaitingSinglePurchase = ({ duration }) => {
         <span>
           Aguardando
           <br />
-          compra…
+          comprovação…
         </span>
       }
       duration={duration}

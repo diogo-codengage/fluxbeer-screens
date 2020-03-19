@@ -5302,7 +5302,6 @@ export const BeerPour = (props) => {
   }, [])
 
   useEffect(() => {
-    console.warn('%%%%%%% ANIMATION: ', animationRef.current)
     if (props.volume > 0) {
       if (props.volume < TOTAL_VOLUME) {
         setValue(value + 8)

@@ -14,28 +14,28 @@ html {
 }
 
 /* Sections
-     ========================================================================== */
+   ========================================================================== */
 
 /**
-   * Remove the margin in all browsers.
-   */
+ * Remove the margin in all browsers.
+ */
 
 body {
   margin: 0;
 }
 
 /**
-   * Render the `main` element consistently in IE.
-   */
+ * Render the `main` element consistently in IE.
+ */
 
 main {
   display: block;
 }
 
 /**
-   * Correct the font size and margin on `h1` elements within `section` and
-   * `article` contexts in Chrome, Firefox, and Safari.
-   */
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
 
 h1 {
   font-size: 2em;
@@ -43,12 +43,12 @@ h1 {
 }
 
 /* Grouping content
-     ========================================================================== */
+   ========================================================================== */
 
 /**
-   * 1. Add the correct box sizing in Firefox.
-   * 2. Show the overflow in Edge and IE.
-   */
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
 
 hr {
   box-sizing: content-box; /* 1 */
@@ -57,9 +57,9 @@ hr {
 }
 
 /**
-   * 1. Correct the inheritance and scaling of font size in all browsers.
-   * 2. Correct the odd `em` font sizing in all browsers.
-   */
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 
 pre {
   font-family: monospace, monospace; /* 1 */
@@ -67,20 +67,20 @@ pre {
 }
 
 /* Text-level semantics
-     ========================================================================== */
+   ========================================================================== */
 
 /**
-   * Remove the gray background on active links in IE 10.
-   */
+ * Remove the gray background on active links in IE 10.
+ */
 
 a {
   background-color: transparent;
 }
 
 /**
-   * 1. Remove the bottom border in Chrome 57-
-   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-   */
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
 
 abbr[title] {
   border-bottom: none; /* 1 */
@@ -89,8 +89,8 @@ abbr[title] {
 }
 
 /**
-   * Add the correct font weight in Chrome, Edge, and Safari.
-   */
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
 
 b,
 strong {
@@ -98,9 +98,9 @@ strong {
 }
 
 /**
-   * 1. Correct the inheritance and scaling of font size in all browsers.
-   * 2. Correct the odd `em` font sizing in all browsers.
-   */
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 
 code,
 kbd,
@@ -110,17 +110,17 @@ samp {
 }
 
 /**
-   * Add the correct font size in all browsers.
-   */
+ * Add the correct font size in all browsers.
+ */
 
 small {
   font-size: 80%;
 }
 
 /**
-   * Prevent `sub` and `sup` elements from affecting the line height in
-   * all browsers.
-   */
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
 
 sub,
 sup {
@@ -139,23 +139,23 @@ sup {
 }
 
 /* Embedded content
-     ========================================================================== */
+   ========================================================================== */
 
 /**
-   * Remove the border on images inside links in IE 10.
-   */
+ * Remove the border on images inside links in IE 10.
+ */
 
 img {
   border-style: none;
 }
 
 /* Forms
-     ========================================================================== */
+   ========================================================================== */
 
 /**
-   * 1. Change the font styles in all browsers.
-   * 2. Remove the margin in Firefox and Safari.
-   */
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
 
 button,
 input,
@@ -169,30 +169,28 @@ textarea {
 }
 
 /**
-   * Show the overflow in IE.
-   * 1. Show the overflow in Edge.
-   */
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
 
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
 /**
-   * Remove the inheritance of text transform in Edge, Firefox, and IE.
-   * 1. Remove the inheritance of text transform in Firefox.
-   */
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
 
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
 /**
-   * Correct the inability to style clickable types in iOS and Safari.
-   */
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
 
 button,
 [type="button"],
@@ -202,8 +200,8 @@ button,
 }
 
 /**
-   * Remove the inner border and padding in Firefox.
-   */
+ * Remove the inner border and padding in Firefox.
+ */
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -214,8 +212,8 @@ button::-moz-focus-inner,
 }
 
 /**
-   * Restore the focus styles unset by the previous rule.
-   */
+ * Restore the focus styles unset by the previous rule.
+ */
 
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
@@ -225,19 +223,19 @@ button:-moz-focusring,
 }
 
 /**
-   * Correct the padding in Firefox.
-   */
+ * Correct the padding in Firefox.
+ */
 
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
 
 /**
-   * 1. Correct the text wrapping in Edge and IE.
-   * 2. Correct the color inheritance from `fieldset` elements in IE.
-   * 3. Remove the padding so developers are not caught out when they zero out
-   *    `fieldset` elements in all browsers.
-   */
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
 
 legend {
   box-sizing: border-box; /* 1 */
@@ -249,25 +247,25 @@ legend {
 }
 
 /**
-   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
-   */
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
 
 progress {
   vertical-align: baseline;
 }
 
 /**
-   * Remove the default vertical scrollbar in IE 10+.
-   */
+ * Remove the default vertical scrollbar in IE 10+.
+ */
 
 textarea {
   overflow: auto;
 }
 
 /**
-   * 1. Add the correct box sizing in IE 10.
-   * 2. Remove the padding in IE 10.
-   */
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
 
 [type="checkbox"],
 [type="radio"] {
@@ -276,8 +274,8 @@ textarea {
 }
 
 /**
-   * Correct the cursor style of increment and decrement buttons in Chrome.
-   */
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
@@ -285,9 +283,9 @@ textarea {
 }
 
 /**
-   * 1. Correct the odd appearance in Chrome and Safari.
-   * 2. Correct the outline style in Safari.
-   */
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
 
 [type="search"] {
   -webkit-appearance: textfield; /* 1 */
@@ -295,17 +293,17 @@ textarea {
 }
 
 /**
-   * Remove the inner padding in Chrome and Safari on macOS.
-   */
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 /**
-   * 1. Correct the inability to style clickable types in iOS and Safari.
-   * 2. Change font properties to `inherit` in Safari.
-   */
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
@@ -313,54 +311,54 @@ textarea {
 }
 
 /* Interactive
-     ========================================================================== */
+   ========================================================================== */
 
 /*
-   * Add the correct display in Edge, IE 10+, and Firefox.
-   */
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
 
 details {
   display: block;
 }
 
 /*
-   * Add the correct display in all browsers.
-   */
+ * Add the correct display in all browsers.
+ */
 
 summary {
   display: list-item;
 }
 
 /* Misc
-     ========================================================================== */
+   ========================================================================== */
 
 /**
-   * Add the correct display in IE 10+.
-   */
+ * Add the correct display in IE 10+.
+ */
 
 template {
   display: none;
 }
 
 /**
-   * Add the correct display in IE 10.
-   */
+ * Add the correct display in IE 10.
+ */
 
 [hidden] {
   display: none;
 }
 
 /**
-   * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
-   * A thin layer on top of normalize.css that provides a starting point more
-   * suitable for web applications.
-   */
+ * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
 
 /**
-   * 1. Prevent padding and border from affecting element width
-   * https://goo.gl/pYtbK7
-   * 2. Change the default font family in all browsers (opinionated)
-   */
+ * 1. Prevent padding and border from affecting element width
+ * https://goo.gl/pYtbK7
+ * 2. Change the default font family in all browsers (opinionated)
+ */
 
 html {
   box-sizing: border-box; /* 1 */
@@ -374,8 +372,8 @@ html {
 }
 
 /**
-   * Removes the default spacing and border for appropriate elements.
-   */
+ * Removes the default spacing and border for appropriate elements.
+ */
 
 blockquote,
 dl,
@@ -399,9 +397,9 @@ button {
 }
 
 /**
-   * Work around a Firefox/IE bug where the transparent `button` background
-   * results in a loss of the default `button` focus styles.
-   */
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
 
 button:focus {
   outline: 1px dotted;
@@ -421,37 +419,35 @@ ul {
 }
 
 /**
-   * Tailwind custom reset styles
-   */
+ * Tailwind custom reset styles
+ */
 
 /**
-   * 1. Use the system font stack as a sane default.
-   * 2. Use Tailwind's default "normal" line-height so the user isn't forced
-   * to override it to ensure consistency even when using the default theme.
-   */
+ * 1. Use the system font stack as a sane default.
+ * 2. Use Tailwind's default "normal" line-height so the user isn't forced
+ * to override it to ensure consistency even when using the default theme.
+ */
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
 /**
-   * Allow adding a border to an element by just adding a border-width.
-   *
-   * By default, the way the browser specifies that an element should have no
-   * border is by setting it's border-style to `none` in the user-agent
-   * stylesheet.
-   *
-   * In order to easily add borders to elements by just setting the `border-width`
-   * property, we change the default border-style for all elements to `solid`, and
-   * use border-width to hide them instead. This way our `border` utilities only
-   * need to set the `border-width` property instead of the entire `border`
-   * shorthand, making our border utilities much more straightforward to compose.
-   *
-   * https://github.com/tailwindcss/tailwindcss/pull/116
-   */
+ * Allow adding a border to an element by just adding a border-width.
+ *
+ * By default, the way the browser specifies that an element should have no
+ * border is by setting it's border-style to `none` in the user-agent
+ * stylesheet.
+ *
+ * In order to easily add borders to elements by just setting the `border-width`
+ * property, we change the default border-style for all elements to `solid`, and
+ * use border-width to hide them instead. This way our `border` utilities only
+ * need to set the `border-width` property instead of the entire `border`
+ * shorthand, making our border utilities much more straightforward to compose.
+ *
+ * https://github.com/tailwindcss/tailwindcss/pull/116
+ */
 
 *,
 *::before,
@@ -462,22 +458,22 @@ html {
 }
 
 /*
-   * Ensure horizontal rules are visible by default
-   */
+ * Ensure horizontal rules are visible by default
+ */
 
 hr {
   border-top-width: 1px;
 }
 
 /**
-   * Undo the `border-style: none` reset that Normalize applies to images so that
-   * our `border-{width}` utilities have the expected effect.
-   *
-   * The Normalize reset is unnecessary for us since we default the border-width
-   * to 0 on all elements.
-   *
-   * https://github.com/tailwindcss/tailwindcss/issues/362
-   */
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
+ *
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
+ */
 
 img {
   border-style: solid;
@@ -512,9 +508,9 @@ h6 {
 }
 
 /**
-   * Reset links to optimize for opt-in styling instead of
-   * opt-out.
-   */
+ * Reset links to optimize for opt-in styling instead of
+ * opt-out.
+ */
 
 a {
   color: inherit;
@@ -522,12 +518,12 @@ a {
 }
 
 /**
-   * Reset form element properties that are easy to forget to
-   * style explicitly so you don't inadvertently introduce
-   * styles that deviate from your design system. These styles
-   * supplement a partial reset that is already applied by
-   * normalize.css.
-   */
+ * Reset form element properties that are easy to forget to
+ * style explicitly so you don't inadvertently introduce
+ * styles that deviate from your design system. These styles
+ * supplement a partial reset that is already applied by
+ * normalize.css.
+ */
 
 button,
 input,
@@ -540,27 +536,26 @@ textarea {
 }
 
 /**
-   * Use the configured 'mono' font family for elements that
-   * are expected to be rendered with a monospace font, falling
-   * back to the system monospace stack if there is no configured
-   * 'mono' font family.
-   */
+ * Use the configured 'mono' font family for elements that
+ * are expected to be rendered with a monospace font, falling
+ * back to the system monospace stack if there is no configured
+ * 'mono' font family.
+ */
 
 pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /**
-   * Make replaced elements `display: block` by default as that's
-   * the behavior you want almost all of the time. Inspired by
-   * CSS Remedy, with `svg` added as well.
-   *
-   * https://github.com/mozdevs/cssremedy/issues/14
-   */
+ * Make replaced elements `display: block` by default as that's
+ * the behavior you want almost all of the time. Inspired by
+ * CSS Remedy, with `svg` added as well.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
 
 img,
 svg,
@@ -575,11 +570,11 @@ object {
 }
 
 /**
-   * Constrain images and videos to the parent width and preserve
-   * their instrinsic aspect ratio.
-   *
-   * https://github.com/mozdevs/cssremedy/issues/14
-   */
+ * Constrain images and videos to the parent width and preserve
+ * their instrinsic aspect ratio.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
 
 img,
 video {
@@ -639,8 +634,8 @@ video {
 
 .appearance-none {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .bg-fixed {
@@ -668,11 +663,11 @@ video {
 }
 
 .bg-default {
-  background-color: #14172c;
+  background-color: #14172C;
 }
 
 .bg-orange {
-  background-color: #ff8500;
+  background-color: #FF8500;
 }
 
 .hover\:bg-transparent:hover {
@@ -688,11 +683,11 @@ video {
 }
 
 .hover\:bg-default:hover {
-  background-color: #14172c;
+  background-color: #14172C;
 }
 
 .hover\:bg-orange:hover {
-  background-color: #ff8500;
+  background-color: #FF8500;
 }
 
 .focus\:bg-transparent:focus {
@@ -708,11 +703,11 @@ video {
 }
 
 .focus\:bg-default:focus {
-  background-color: #14172c;
+  background-color: #14172C;
 }
 
 .focus\:bg-orange:focus {
-  background-color: #ff8500;
+  background-color: #FF8500;
 }
 
 .bg-bottom {
@@ -808,7 +803,7 @@ video {
 }
 
 .border-orange {
-  border-color: #ff8500;
+  border-color: #FF8500;
 }
 
 .hover\:border-transparent:hover {
@@ -824,7 +819,7 @@ video {
 }
 
 .hover\:border-orange:hover {
-  border-color: #ff8500;
+  border-color: #FF8500;
 }
 
 .focus\:border-transparent:focus {
@@ -840,7 +835,7 @@ video {
 }
 
 .focus\:border-orange:focus {
-  border-color: #ff8500;
+  border-color: #FF8500;
 }
 
 .rounded-none {
@@ -3844,11 +3839,11 @@ video {
 }
 
 .placeholder-default::placeholder {
-  color: #14172c;
+  color: #14172C;
 }
 
 .placeholder-orange::placeholder {
-  color: #ff8500;
+  color: #FF8500;
 }
 
 .focus\:placeholder-transparent:focus::placeholder {
@@ -3864,11 +3859,11 @@ video {
 }
 
 .focus\:placeholder-default:focus::placeholder {
-  color: #14172c;
+  color: #14172C;
 }
 
 .focus\:placeholder-orange:focus::placeholder {
-  color: #ff8500;
+  color: #FF8500;
 }
 
 .pointer-events-none {
@@ -3987,18 +3982,15 @@ video {
 }
 
 .shadow-md {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .shadow-lg {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .shadow-xl {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .shadow-2xl {
@@ -4026,18 +4018,15 @@ video {
 }
 
 .hover\:shadow-md:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .hover\:shadow-lg:hover {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .hover\:shadow-xl:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .hover\:shadow-2xl:hover {
@@ -4065,18 +4054,15 @@ video {
 }
 
 .focus\:shadow-md:focus {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .focus\:shadow-lg:focus {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .focus\:shadow-xl:focus {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .focus\:shadow-2xl:focus {
@@ -4144,11 +4130,11 @@ video {
 }
 
 .text-default {
-  color: #14172c;
+  color: #14172C;
 }
 
 .text-orange {
-  color: #ff8500;
+  color: #FF8500;
 }
 
 .hover\:text-transparent:hover {
@@ -4164,11 +4150,11 @@ video {
 }
 
 .hover\:text-default:hover {
-  color: #14172c;
+  color: #14172C;
 }
 
 .hover\:text-orange:hover {
-  color: #ff8500;
+  color: #FF8500;
 }
 
 .focus\:text-transparent:focus {
@@ -4184,11 +4170,11 @@ video {
 }
 
 .focus\:text-default:focus {
-  color: #14172c;
+  color: #14172C;
 }
 
 .focus\:text-orange:focus {
-  color: #ff8500;
+  color: #FF8500;
 }
 
 .text-xs {
@@ -4331,22 +4317,22 @@ video {
 
 .select-none {
   -webkit-user-select: none;
-  user-select: none;
+          user-select: none;
 }
 
 .select-text {
   -webkit-user-select: text;
-  user-select: text;
+          user-select: text;
 }
 
 .select-all {
   -webkit-user-select: all;
-  user-select: all;
+          user-select: all;
 }
 
 .select-auto {
   -webkit-user-select: auto;
-  user-select: auto;
+          user-select: auto;
 }
 
 .align-baseline {
@@ -4649,7 +4635,7 @@ video {
 }
 
 html {
-  color: #14172c;
+  color: #14172C;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

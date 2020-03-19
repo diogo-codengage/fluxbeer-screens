@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import {gql} from '@apollo/client';
 
 export const TAP_INFO_QUERY = gql`
   query tapInfo($tapId: bigint!) {
@@ -7,7 +7,7 @@ export const TAP_INFO_QUERY = gql`
       companyId
       id
       serial
-      tap_containers(limit: 1, order_by: { createdAt: desc }) {
+      tap_containers(limit: 1, order_by: {createdAt: desc}) {
         stock_container {
           measureUnit
           capacity
@@ -28,11 +28,7 @@ export const TAP_INFO_QUERY = gql`
 
 export const AVAILABLE_CONSUMPTION_SUBSCRIPTION = gql`
   subscription availableConsumption($tapId: bigint) {
-    consumption_order(
-      where: { _not: { consumption_begins: {} }, tapId: { _eq: $tapId } }
-      order_by: { id: asc }
-      limit: 1
-    ) {
+    consumption_order(where: {_not: {consumption_begins: {}}, tapId: {_eq: $tapId}}, order_by: {id: asc}, limit: 1) {
       amount
       code
       comment
@@ -51,16 +47,8 @@ export const AVAILABLE_CONSUMPTION_SUBSCRIPTION = gql`
 // export const CONSUMPTION_BEGIN_MUTATION = gql``;
 
 export const CONSUMPTION_BEGIN_MUTATION = gql`
-  mutation consumptionBeginMutation(
-    $limitAmount: Int!
-    $consumptionOrderId: bigint
-  ) {
-    insert_consumption_begin(
-      objects: {
-        limitAmount: $limitAmount
-        consumptionOrderId: $consumptionOrderId
-      }
-    ) {
+  mutation consumptionBeginMutation($limitAmount: Int!, $consumptionOrderId: bigint) {
+    insert_consumption_begin(objects: {limitAmount: $limitAmount, consumptionOrderId: $consumptionOrderId}) {
       returning {
         id
         createdAt
@@ -73,20 +61,8 @@ export const CONSUMPTION_BEGIN_MUTATION = gql`
 `;
 
 export const CONSUMPTION_END_MUTATION = gql`
-  mutation consumptionEndMutation(
-    $consumptionBeginId: bigint!
-    $totalAmount: Int!
-    $code: uuid
-    $metric: jsonb
-  ) {
-    insert_consumption_end(
-      objects: {
-        consumptionBeginId: $consumptionBeginId
-        totalAmount: $totalAmount
-        code: $code
-        metric: $metric
-      }
-    ) {
+  mutation consumptionEndMutation($consumptionBeginId: bigint!, $totalAmount: Int!, $code: uuid, $metric: jsonb) {
+    insert_consumption_end(objects: {consumptionBeginId: $consumptionBeginId, totalAmount: $totalAmount, code: $code, metric: $metric}) {
       returning {
         code
         id
