@@ -13,7 +13,7 @@
     "apollo-link-ws": "^1.0.19",
     "axios": "^0.19.2",
     "cross-fetch": "^3.0.4",
-    "electron": "^8.1.1",
+    "electron": "^13.6.6",
     "graphql": "^14.6.0",
     "lottie-web": "^5.5.10",
     "react": "^16.13.0",
